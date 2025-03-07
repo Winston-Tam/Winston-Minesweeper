@@ -22,7 +22,7 @@ void setup ()
 }
 public void setMines()
 {
-  while (mines.size() < (NUM_ROWS*NUM_COLS)*0.16){
+  while (mines.size() < (NUM_ROWS*NUM_COLS)*0.10){
   int r = (int)(Math.random()*NUM_ROWS);
   int c = (int)(Math.random()*NUM_COLS);
   if (!mines.contains(buttons[r][c])){
@@ -60,9 +60,15 @@ public void displayLosingMessage()
     buttons[9][9].setLabel("O");
     buttons[9][10].setLabel("S");
     buttons[9][11].setLabel("E");
-    }
-    noLoop();
   }
+  noLoop();
+  for (int r = 0; r < NUM_ROWS;r++){
+    for (int c = 0; c < NUM_COLS;c++){
+      if (mines.contains(buttons[r][c]) && !buttons[r][c].isClicked())
+      buttons[r][c].mousePressed();
+    }
+  }
+}
 public void displayWinningMessage()
 {
     fill(255);
