@@ -22,7 +22,7 @@ void setup ()
 }
 public void setMines()
 {
-  while (mines.size() < (NUM_ROWS*NUM_COLS)*0.18){
+  while (mines.size() < (NUM_ROWS*NUM_COLS)*0.12){
   int r = (int)(Math.random()*NUM_ROWS);
   int c = (int)(Math.random()*NUM_COLS);
   if (!mines.contains(buttons[r][c])){
