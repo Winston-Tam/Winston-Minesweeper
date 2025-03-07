@@ -83,7 +83,7 @@ public void displayWinningMessage()
 public boolean isValid(int row, int col)
 {
     //your code here
-    if (row < NUM_ROWS && row >=0 && col < NUM_COLS & col>=0){
+    if (row < NUM_ROWS && row >=0 && col < NUM_COLS && col>=0){
     return true;
     }
     return false;
@@ -129,6 +129,7 @@ public class MSButton
     public void mousePressed () 
     {
         clicked = true;
+        println(mouseButton);
         if(mouseButton == RIGHT) {
           if (flagged == true){
           flagged = false;
