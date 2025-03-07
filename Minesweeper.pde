@@ -22,7 +22,7 @@ void setup ()
 }
 public void setMines()
 {
-  while (mines.size() < (NUM_ROWS*NUM_COLS)*0.12){
+  while (mines.size() < (NUM_ROWS*NUM_COLS)*0.14){
   int r = (int)(Math.random()*NUM_ROWS);
   int c = (int)(Math.random()*NUM_COLS);
   if (!mines.contains(buttons[r][c])){
@@ -34,7 +34,7 @@ public void setMines()
 
 public void draw ()
 {
-    background( 0 );
+    background(0);
     if(isWon() == true)
         displayWinningMessage();
 }
@@ -53,13 +53,13 @@ public void displayLosingMessage()
 {
     if (isWon() == false){
     fill(255);
-    buttons[8][8].setLabel("Y");
-    buttons[8][9].setLabel("O");
-    buttons[8][10].setLabel("U");
-    buttons[9][8].setLabel("L");
-    buttons[9][9].setLabel("O");
-    buttons[9][10].setLabel("S");
-    buttons[9][11].setLabel("E");
+    buttons[14][14].setLabel("Y");
+    buttons[14][15].setLabel("O");
+    buttons[14][16].setLabel("U");
+    buttons[15][14].setLabel("L");
+    buttons[15][15].setLabel("O");
+    buttons[15][16].setLabel("S");
+    buttons[15][17].setLabel("E");
   }
   noLoop();
   for (int r = 0; r < NUM_ROWS;r++){
@@ -72,12 +72,12 @@ public void displayLosingMessage()
 public void displayWinningMessage()
 {
     fill(255);
-    buttons[8][8].setLabel("Y");
-    buttons[8][9].setLabel("O");
-    buttons[8][10].setLabel("U");
-    buttons[9][8].setLabel("W");
-    buttons[9][9].setLabel("I");
-    buttons[9][10].setLabel("N");
+    buttons[14][14].setLabel("Y");
+    buttons[14][15].setLabel("O");
+    buttons[14][16].setLabel("U");
+    buttons[15][14].setLabel("W");
+    buttons[15][15].setLabel("I");
+    buttons[15][16].setLabel("N");
     
 }
 public boolean isValid(int row, int col)
