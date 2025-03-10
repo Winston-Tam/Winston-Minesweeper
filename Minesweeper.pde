@@ -59,7 +59,6 @@ public void displayLosingMessage()
     buttons[15][16].setLabel("S");
     buttons[15][17].setLabel("E");
   }
-  noLoop();
   for (int r = 0; r < NUM_ROWS;r++){
     for (int c = 0; c < NUM_COLS;c++){
       if (mines.contains(buttons[r][c]) && !buttons[r][c].isClicked())
