@@ -65,7 +65,6 @@ public void displayLosingMessage()
       buttons[r][c].mousePressed();
     }
   }
-noLoop();
 }
 public void displayWinningMessage()
 {
