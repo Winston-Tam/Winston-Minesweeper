@@ -7,7 +7,6 @@ void setup ()
 {
     size(400, 400);
     textAlign(CENTER,CENTER);
-    
     // make the manager
     Interactive.make( this );
     
@@ -28,7 +27,6 @@ public void setMines()
   if (!mines.contains(buttons[r][c])){
   mines.add(buttons[r][c]);
   }
-  System.out.print(mines.size());
 }
 }
 
@@ -143,7 +141,7 @@ public class MSButton
           return;
         }
         else if (countMines(myRow, myCol)>0){
-         setLabel(Integer.toString(countMines(myRow, myCol)));
+         setLabel(""+(countMines(myRow, myCol)));
         }
         else{
           for (int r = myRow-1; r <= myRow+1; r++){ //rows
